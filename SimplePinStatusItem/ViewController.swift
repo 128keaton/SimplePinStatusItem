@@ -27,7 +27,6 @@ class ViewController: NSViewController {
     @IBAction func togglePinnedStatus(sender: NSButton) {
         self.popover?.shouldClose = !self.popover!.shouldClose
         self.updateStatusLabel()
-        NSApplication.shared.activate(ignoringOtherApps: true)
     }
 
 }

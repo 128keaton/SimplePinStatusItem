@@ -13,17 +13,18 @@ class StatusBarManager: NSObject {
     var popoverVC: ViewController?
     
     let menuBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    let menuBarIcon = NSImage(named: "StatusBarIcon")
     
     override init() {
         super.init()
         print("Hello from StatusBarManager")
         
         self.initPopover()
-        self.initMenuBarItem(title: "Open Popover")
+        self.initMenuBarItem()
     }
     
-    fileprivate func initMenuBarItem(title: String) {
-        self.menuBarItem.button?.title = title
+    fileprivate func initMenuBarItem() {
+        self.menuBarItem.button?.image = menuBarIcon
         self.menuBarItem.button?.target = self
         self.menuBarItem.button?.action = #selector(showStationaryVC(sender:))
     }
@@ -49,7 +50,6 @@ class StatusBarManager: NSObject {
             popoverVC?.popover = popover
         }
         
-        NSApplication.shared.activate(ignoringOtherApps: true)
         popover.contentViewController = popoverVC
         popover.show(relativeTo: .zero, of: sender, preferredEdge: .minY)
     }

@@ -20,6 +20,7 @@ class PinnablePopover: NSPopover {
             self._shouldClose  = newValue
             
             if (newValue) {
+                NSApplication.shared.activate(ignoringOtherApps: true)
                 self.behavior = NSPopover.Behavior.transient
             } else {
                 self.behavior = NSPopover.Behavior.applicationDefined
@@ -39,6 +40,11 @@ class PinnablePopover: NSPopover {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    override func show(relativeTo positioningRect: NSRect, of positioningView: NSView, preferredEdge: NSRectEdge) {
+        super.show(relativeTo: positioningRect, of: positioningView, preferredEdge: preferredEdge)
+        NSApplication.shared.activate(ignoringOtherApps: true)
     }
     
     override func performClose(_ sender: Any?) {
