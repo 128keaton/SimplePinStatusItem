@@ -11,6 +11,9 @@
 		8A2AC9B92613C75A0003110F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2AC9B82613C75A0003110F /* ViewController.swift */; };
 		8A2AC9BB2613C75B0003110F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2AC9BA2613C75B0003110F /* Assets.xcassets */; };
 		8A2AC9BE2613C75B0003110F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A2AC9BC2613C75B0003110F /* Main.storyboard */; };
+		8A2AC9C82613C77E0003110F /* PinnablePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2AC9C72613C77E0003110F /* PinnablePopover.swift */; };
+		8A2AC9CB2613C8B40003110F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A2AC9CA2613C8B40003110F /* MainMenu.xib */; };
+		8A2AC9CF2613C9DB0003110F /* StatusBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2AC9CE2613C9DB0003110F /* StatusBarManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		8A2AC9BD2613C75B0003110F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A2AC9BF2613C75B0003110F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A2AC9C02613C75B0003110F /* SimplePinStatusItem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimplePinStatusItem.entitlements; sourceTree = "<group>"; };
+		8A2AC9C72613C77E0003110F /* PinnablePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnablePopover.swift; sourceTree = "<group>"; };
+		8A2AC9CA2613C8B40003110F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		8A2AC9CE2613C9DB0003110F /* StatusBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				8A2AC9BC2613C75B0003110F /* Main.storyboard */,
 				8A2AC9BF2613C75B0003110F /* Info.plist */,
 				8A2AC9C02613C75B0003110F /* SimplePinStatusItem.entitlements */,
+				8A2AC9C72613C77E0003110F /* PinnablePopover.swift */,
+				8A2AC9CA2613C8B40003110F /* MainMenu.xib */,
+				8A2AC9CE2613C9DB0003110F /* StatusBarManager.swift */,
 			);
 			path = SimplePinStatusItem;
 			sourceTree = "<group>";
@@ -122,6 +131,7 @@
 			files = (
 				8A2AC9BB2613C75B0003110F /* Assets.xcassets in Resources */,
 				8A2AC9BE2613C75B0003110F /* Main.storyboard in Resources */,
+				8A2AC9CB2613C8B40003110F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A2AC9B92613C75A0003110F /* ViewController.swift in Sources */,
+				8A2AC9CF2613C9DB0003110F /* StatusBarManager.swift in Sources */,
 				8A2AC9B72613C75A0003110F /* AppDelegate.swift in Sources */,
+				8A2AC9C82613C77E0003110F /* PinnablePopover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

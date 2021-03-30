@@ -9,18 +9,25 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    public var popover: PinnablePopover?
+    
+    @IBOutlet var statusLabel: NSTextField?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.updateStatusLabel()
+    }
+    
+    
+    fileprivate func updateStatusLabel() {
+        self.statusLabel?.stringValue = "Status: \(self.popover!.shouldClose ? "Unpinned" : "Pinned")"
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    
+    @IBAction func togglePinnedStatus(sender: NSButton) {
+        self.popover?.shouldClose = !self.popover!.shouldClose
+        self.updateStatusLabel()
     }
-
 
 }
 
