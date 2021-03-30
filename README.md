@@ -1,2 +1,2 @@
 # SimplePinStatusItem
-!(demo)[DemoGif.gif]
+![demo](DemoGif.gif)
